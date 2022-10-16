@@ -1,5 +1,12 @@
 ### Hi there 👋
 
+<a href="https://github.com/tocoteron">
+  <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api?username=takafumi-masuno&count_private=true&show_icons=true&theme=aura" />
+</a>
+<a href="https://github.com/tocoteron">
+  <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=takafumi-masuno&layout=compact&theme=aura" />
+</a>
+
 <!--
 **takafumi-masuno/takafumi-masuno** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
