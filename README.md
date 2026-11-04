@@ -1,9 +1,9 @@
 ### Hi there 👋
 
-<a href="https://github.com/tocoteron">
+<a href="https://github.com/takafumi-masuno">
   <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api?username=takafumi-masuno&count_private=true&show_icons=true&theme=aura" />
 </a>
-<a href="https://github.com/tocoteron">
+<a href="https://github.com/takafumi-masuno">
   <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=takafumi-masuno&layout=compact&theme=aura" />
 </a>
 
