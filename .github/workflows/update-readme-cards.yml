@@ -1,0 +1,48 @@
+# プロフィール README の統計カードを生成してコミットする。
+# 公開インスタンス（github-readme-stats.vercel.app）が停止中（503 DEPLOYMENT_PAUSED）のため、
+# 開発元が推奨する GitHub Actions 方式に切り替えた。
+# GITHUB_TOKEN を使うため、集計対象は公開リポジトリのみ（従来の公開インスタンスと同じ）。
+name: Update README cards
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # 毎日 09:00 JST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Generate stats card
+        # サードパーティのため、タグではなくコミット SHA で固定する（v2.1.0）
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&theme=aura
+          path: profile/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # 取得に失敗したらエラー画像で上書きせず、前回の画像を残す
+          fail_on_error: "true"
+
+      - name: Generate top languages card
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&theme=aura
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+
+      - name: Commit cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: README の統計カードを更新"
+          git push
