@@ -1,10 +1,10 @@
 ### Hi there 👋
 
 <a href="https://github.com/takafumi-masuno">
-  <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api?username=takafumi-masuno&count_private=true&show_icons=true&theme=aura" />
+  <img align="left" height="170px" src="./profile/stats.svg" alt="GitHub stats" />
 </a>
 <a href="https://github.com/takafumi-masuno">
-  <img align="left" height="170px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=takafumi-masuno&layout=compact&theme=aura" />
+  <img align="left" height="170px" src="./profile/top-langs.svg" alt="Top languages" />
 </a>
 
 <!--
